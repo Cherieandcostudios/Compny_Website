@@ -322,6 +322,127 @@
       color: #000000;
       text-decoration: none;
     }
+    
+    /* Portfolio Section */
+    .portfolio {
+      position: relative;
+      padding: 80px;
+      border-radius: 20px 20px 0 0;
+      color: #000;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    /* Background Layers */
+    .portfolio::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 12px;
+      width: 98%;
+      height: 94%;
+      background: url('Protfolio.png') no-repeat center center/cover;
+      z-index: -2;
+    }
+
+    .portfolio::after {
+      content: "";
+      position: absolute;
+      top: 27px;
+        left: 103px;
+        width: 51%;
+        height: 91%;
+      background: url('Union.png') no-repeat center center/cover;
+      opacity: 1;
+      z-index: -1;
+    }
+
+    /* ✅ Portfolio Header - Flexbox Layout */
+    .portfolio-header {
+      display: flex;
+      justify-content: space-between; /* left & right align */
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .portfolio-title {
+      font-size: 16px;
+      font-weight: bold;
+      color: #ff6600;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .portfolio-text {
+      font-size: 42px;
+      font-weight: normal;
+      line-height: 1.4;
+      color: #222;
+      margin: 0;
+      text-align: left;
+      max-width: 760px;
+    }
+
+    .portfolio-divider {
+      border: none;
+      border-top: 1px solid #ccc;
+      margin: 29px 0;
+    }
+
+    .portfolio-items {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      margin-top: 50px;
+    }
+
+    /* ✅ Card Top Divider */
+    .portfolio-card {
+      background: #f8f6f600;
+      border-radius: 16px;
+      padding: 20px;
+      flex: 1;
+      text-align: left;
+      
+    }
+
+    .portfolio-card .portfolio-img {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 15px;
+    }
+
+    .portfolio-card .portfolio-img img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 16px;
+    }
+
+    .date-tag {
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+      background: #f46b08;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 20px;
+    }
+
+    .portfolio-card h5 {
+      font-size: 19px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .portfolio-card p {
+      font-size: 20px;
+      color: #555;
+    }
+
   </style>
 </head>
 <body>
@@ -409,6 +530,47 @@
       <hr>
       <p>Your Business, Powered By Technology — Secure, Adaptable, And Built For Long-Term Success.</p>
       <a href="#" class="view-btn"><u>View More →</u> </a>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section class="portfolio">
+    <div class="portfolio-header">
+      <h2 class="portfolio-title">OUR PORTFOLIO</h2>
+      <p class="portfolio-text">We create digital solutions that stand <b>out and drive growth.</b></p>
+    </div>
+    <hr class="portfolio-divider">
+
+    <div class="portfolio-items">
+      <!-- Project 1 -->
+      <div class="portfolio-card">
+        <div class="portfolio-img">
+          <img src="Product1.png" alt="Project 1">
+          <span class="date-tag">AUG 2025</span>
+        </div>
+        <h5>Project Name</h5>
+        <p>Website Development</p>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="portfolio-card">
+        <div class="portfolio-img">
+          <img src="Product2.png" alt="Project 2">
+          <span class="date-tag">JAN 2025</span>
+        </div>
+        <h5>Project Name</h5>
+        <p>Digital Marketing</p>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="portfolio-card">
+        <div class="portfolio-img">
+          <img src="Product3.png" alt="Project 3">
+          <span class="date-tag">SEP 2024</span>
+        </div>
+        <h5>Project Name</h5>
+        <p>UI-UX Design</p>
+      </div>
     </div>
   </section>
 
