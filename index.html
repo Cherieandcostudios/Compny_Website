@@ -15,7 +15,7 @@
   <header class="navbar">
     <div class="logo"><img src="logo.png" alt="logo"/></div>
     <ul>
-      <li><a href="index2.html">About Us</a></li>
+      <li><a href="pages/index2.html">About Us</a></li>
       <li><a href="#">Services</a></li>
       <li><a href="#">Portfolio</a></li>
       <li><a href="#">Blog</a></li>
@@ -27,7 +27,7 @@
   <!-- Mobile Fullscreen Menu -->
   <div class="mobile-menu">
     <div class="close-btn"><i class="fa fa-times"></i></div>
-    <a href="index2.html">About Us</a>
+    <a href="pages/index2.html">About Us</a>
     <a href="#">Services</a>
     <a href="#">Portfolio</a>
     <a href="#">Blog</a>
@@ -123,63 +123,74 @@
  
    <!-- ✅ Vision Section -->
   
-  <section class="vision-section">
-    <div class="vision-container">
+<section class="vision-section--whatwe">
+    <div class="vision-container--whatwe">
 
-      <!-- Left Content -->
-      <div class="vision-content">
-        <h2 class="vision-title">
-          Every project starts with vision <br>
-          <span>and ends with results that <br> demand attention.</span>
+      <!-- Left Content (unique) -->
+      <div class="vision-left--whatwe">
+        <h2 class="vision-title--whatwe">
+          <span class="vision-title-line1--whatwe">Every project starts with vision</span><br>
+          <span class="vision-title-line2--whatwe">and ends with results that <br> demand attention.</span>
         </h2>
+
         
-        <!-- Accordions -->
-        <div class="accordion">
-          <div class="accordion-item active">
-            <div class="accordion-header">
-              <span class="accordion-number">(01)</span>
-              <span class="accordion-title">Brand Identity</span>
-              <span class="accordion-icon">⌄</span>
+        <!-- Accordion (wrapper unique) -->
+        <div class="accordion--whatwe" class="portfolio-divider">
+          
+
+          <!-- Item 1: Brand Identity (all unique classes) -->
+          <div class="accordion-item--brand-identity is-open">
+            <div class="accordion-header--brand-identity" data-acc="brand-identity">
+              <span class="accordion-number--brand-identity">(01)</span>
+              <span class="accordion-title--brand-identity">Brand Identity</span>
+              <span class="accordion-icon--brand-identity"><i class="fa-solid fa-angle-up"></i></span>
             </div>
-            <div class="accordion-content">
-              <p>We craft unique and memorable brand identities that set you apart in the market.</p>
+            <div class="accordion-content--brand-identity">
+              
             </div>
           </div>
 
-          <div class="accordion-item">
-            <div class="accordion-header">
-              <span class="accordion-number">(02)</span>
-              <span class="accordion-title">Web & UI UX Development</span>
-              <span class="accordion-icon">⌄</span>
+          <!-- Item 2: Web & UI UX Development (all unique classes) -->
+          <div class="accordion-item--web-uiux">
+            <div class="accordion-header--web-uiux" data-acc="web-uiux">
+              <span class="accordion-number--web-uiux">(02)</span>
+              <span class="accordion-title--web-uiux">Web &amp; UI UX Development</span>
+              <span class="accordion-icon--web-uiux"><i class="fa-solid fa-angle-down"></i></span>
             </div>
-            <div class="accordion-content">
-              <p>We design intuitive and modern websites with seamless user experiences.</p>
+            <div class="accordion-content--web-uiux">
+              
             </div>
           </div>
 
-          <div class="accordion-item">
-            <div class="accordion-header">
-              <span class="accordion-number">(03)</span>
-              <span class="accordion-title">E-Commerce Solutions</span>
-              <span class="accordion-icon">⌄</span>
+          <!-- Item 3: E-Commerce Solutions (all unique classes) -->
+          <div class="accordion-item--ecommerce">
+            <div class="accordion-header--ecommerce" data-acc="ecommerce">
+              <span class="accordion-number--ecommerce">(03)</span>
+              <span class="accordion-title--ecommerce">E-Commerce Solutions</span>
+              <span class="accordion-icon--ecommerce"><i class="fa-solid fa-angle-down"></i></span>
             </div>
-            <div class="accordion-content">
-              <p>End-to-end scalable e-commerce platforms tailored for growth.</p>
+            <div class="accordion-content--ecommerce">
+              
             </div>
           </div>
+
         </div>
       </div>
 
-      <!-- Right Image -->
-      <div class="vision-image">
-        <p class="vision-subtitle">WHAT WE DO</p>
-        <img src="What_we1.png" alt="What We Do">
+      <!-- Right Image (unique) -->
+      <div class="vision-right--whatwe">
+        <p class="vision-subtitle--whatwe">WHAT WE DO</p>
+        <div class="vision-image-wrap--whatwe">
+          <img class="vision-img--whatwe" src="What_we1.png" alt="What We Do">
+        </div>
       </div>
+
     </div>
   </section>
+
   
 
- <!-- ✅ Insights + Testimonials Section -->
+<!-- ✅ Insights + Testimonials Section -->
 <section class="insights-section">
   <div class="insights-overlay"></div> <!-- background overlay -->
 
@@ -195,14 +206,9 @@
         Making brands unforgettable <br>
         <span>with designs that inspire trust and fuel growth.</span>
       </h2>
-      <!-- 🔥 Updated button with same design as About section -->
-      <a href="#" class="more-btn" style="
-  translate: none;
-  rotate: none;
-  scale: none;
-  opacity: 1;
-  transform: translate(0px);
-  margin-top: 69px;"><span>Read More Insights</span></a>
+
+      <!-- ✅ Fixed button -->
+      <a href="#" class="insights-btn"><span>Read More Insights</span></a>
 
       <!-- Section Header -->
       <div class="testimonials-header">
@@ -215,11 +221,17 @@
       <!-- Testimonials in 2 columns -->
       <div class="testimonials-grid">
         <div class="testimonial-item">
-          <p><br>They didn’t just design our website. They transformed the way people see our business. Now, clients trust us instantly. </p>
+          <p class="para1">
+            They didn’t just design our website. They transformed the way people see our business. 
+            Now, clients trust us instantly.
+          </p>
           <span>- Ananya S., Founder at BrightPath</span>
         </div>
+
         <div class="testimonial-item">
-          <p><br>We always looked like a small player. Chérie & Co. made us look like the brand we dreamed of becoming. </p>
+          <p class="para2">
+            We always looked like a small player. Chérie & Co. made us look like the brand we dreamed of becoming.
+          </p>
           <span>- David R., CEO at NovaWorks</span>
         </div>
       </div>
@@ -235,12 +247,12 @@
     <div class="footer-col contact-col">
       <h4 class="contact-heading">Contact Us</h4>
       <p class="contact-text">
-        AR Mall & Multiplex, Opp. Panvel Point,<br>
-        Mota Varachha, Surat, Gujarat 394101
+        AR mall, 306, Mota Varachha,<br>
+        Surat, Gujarat 394101
       </p><br>
-      <p class="contact-phone">+91 8511773378 &nbsp; | &nbsp; +91 9316585315</p><br>
-      <p class="contact-email">Info@Cherieandcostudios.Com</p>
-      <p class="contact-website">Cherieandcostudios.Com</p>
+      <p class="contact-phone">+91 8511773378 &nbsp; | &nbsp; +91 9316585315 </p><br>
+      <p class="contact-email">info@cherieandcostudios.com </p><br>
+      <p class="contact-website">cherieandcostudios.com</p>
     </div>
 
     <!-- Quick Links -->
@@ -248,7 +260,7 @@
       <h4 class="quicklinks-heading">Quick Links</h4>
       <ul class="quicklinks-list">
         <li><a class="quicklink" href="#">Home</a></li><br>
-        <li><a class="quicklink" href="index2.html">About Us</a></li><br>
+        <li><a class="quicklink" href="pages/index2.html">About Us</a></li><br>
         <li><a class="quicklink" href="#">Services</a></li><br>
         <li><a class="quicklink" href="#">Portfolio</a></li><br>
         <li><a class="quicklink" href="#">Blogs</a></li><br>
@@ -269,9 +281,9 @@
 
   <!-- Bottom Line -->
   <div class="footer-bottom">
-    <p class="footer-privacy">Privacy Policy</p>
-    <p class="footer-copy" style="margin-right: 6s0px; padding-right: 30px;">Copyright Chérie & Co. 2025</p>
-    <p class="footer-terms">Terms And Conditions</p>
+    <p class="footer-privacy"><b>Privacy Policy</p></b>
+    <p class="footer-copy" style="margin-right: 6s0px; padding-right: 6px; margin-left: 63px; font-size: 18px;"><b>Copyright Cherie & Co. 2025</b></p>
+    <p class="footer-terms"><b>Terms And Conditions</b></p>
   </div>
 </footer>
 
