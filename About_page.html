@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - Chérie & Co.</title>
+  <style>
+    /* Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #fff;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    /* Header / Navbar */
+    header {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      padding: 20px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10;
+    }
+    header .logo img { height: 40px; }
+    header nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 16px;
+      font-weight: 500;
+    }
+    header .contact-btn {
+      background: #e65300;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      height: 320px;
+      display: flex;
+      align-items: flex-end;
+      padding: 60px;
+      background: url('header-bg.png') no-repeat center center/cover;
+      color: #fff;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top:0; left:0;
+      width:100%; height:100%;
+      background: rgba(0,0,0,0.55);
+    }
+    .hero h1 {
+      position: relative;
+      font-size: 212px;
+      font-weight: 800;
+      z-index: 2;
+      margin-bottom: -138px;
+      margin-left: -59px;
+    }
+
+    /* About Container */
+    .about-container {
+      padding: 60px 80px;
+    }
+    .about-intro {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+    .about-intro h2 {
+      font-size: 52px;
+      font-weight: 1;
+      margin-bottom: 20px;
+      height: 232px;
+      line-height: 1;
+      padding: 26px;
+      color: #717171;
+      margin-bottom: -26px;
+    }
+    .about-intro p {
+      font-size: 21px;
+  color: #333;
+  margin-left: 22px;
+    }
+
+    /* Mission/Vision Cards */
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .card {
+      border: 1px solid #eee;
+      padding: 19px;
+      border-radius: 12px;
+      background: #fff;
+      width: 268pxpx;
+      width: 318px;
+      margin-top: 40px;
+    }
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+    .card-header img {
+      width: 67px;
+        height: 63px;
+        margin-top: -33px;
+    }
+    .card-header h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-top: 114px;
+       margin-left: -77px;
+    }
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: #ddd;
+      margin: 10px 0;
+    }
+    .card p {
+      font-size: 13.3px;
+      color: #555;
+    }
+
+    /* Story Section */
+    .story {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 40px;
+      margin-top: 60px;
+      padding: 40px;
+      border-radius: 15px;
+      background: #f7f5f5;
+    }
+    .story-text h4 {
+      color: #e65300;
+      font-size: 16px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    .story-text p {
+      font-size: 16px;
+      color: #333;
+    }
+    .story-img {
+      position: relative;
+    }
+    .story-img img {
+      width: 100%;
+      border-radius: 12px;
+    }
+    .logo-overlay {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background: #e65300;
+      padding: 10px;
+      border-radius: 50%;
+    }
+    .story-img p {
+      margin-top: 12px;
+      font-weight: bold;
+      text-align: center;
+      margin-right: 310px;
+    }
+
+    /* Principles Section */
+    .principles {
+      margin-top: 60px;
+      text-align: left;
+    }
+    .principles h2 {
+      font-size: 32px;
+      font-weight: 700;
+    }
+    .principles p {
+      font-size: 24px;
+      margin-bottom: 30px;
+      color: #333;
+    }
+    .principle-cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+    }
+    .principle-box {
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+    }
+    .principle-box img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+    .principle-icon {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: #fff;
+      padding: 10px;
+      border-radius: 12px;
+    }
+    .principle-icon img {
+      width: 20px;
+      height: 20px;
+    }
+    .principle-label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #e65300;
+      color: #fff;
+      text-align: center;
+      font-weight: 600;
+      padding: 10px 0;
+    }
+
+    /* Footer */
+    footer {
+      background: #111;
+      color: #fff;
+      padding: 50px 80px;
+      margin-top: 60px;
+    }
+    footer .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 40px;
+    }
+    footer h3 { margin-bottom: 15px; }
+    footer p, footer a {
+      color: #bbb;
+      font-size: 15px;
+      margin-bottom: 8px;
+      text-decoration: none;
+    }
+    footer .getintouch p {
+      font-size: 20px;
+      font-weight: 500;
+      color: #fff;
+    }
+    .big-text {
+      font-size: 60px;
+      font-weight: 800;
+      text-align: center;
+      margin: 40px 0 20px;
+    }
+    .copyright {
+      text-align: center;
+      font-size: 14px;
+      color: #aaa;
+    }
+
+    /* Responsive */
+    @media(max-width: 1000px) {
+      .about-intro { grid-template-columns: 1fr; }
+      .story { grid-template-columns: 1fr; }
+      .principle-cards { grid-template-columns: repeat(2,1fr); }
+      footer .footer-grid { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 70px; }
+    }
+    @media(max-width: 600px) {
+      .principle-cards { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 50px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo"><img src="logo.png" alt="Chérie & Co."></div>
+    <nav>
+      <a href="#">About Us</a>
+      <a href="#">Services</a>
+      <a href="#">Portfolio</a>
+      <a href="#">Blog</a>
+    </nav>
+    <a href="#" class="contact-btn">Contact Us</a>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>About Us</h1>
+  </section>
+
+  <!-- About Intro -->
+  <div class="about-container">
+    <div class="about-intro">
+      <div>
+        <h2>We make your brand look like it already made it.</h2>
+        <p>At Chérie & Co. Studios®, We Craft Websites And Digital Identities That Build Trust, Create Momentum, And Make Your Business Impossible To Ignore.</p>
+      </div>
+      <div class="cards">
+        <!-- Mission -->
+        <div class="card">
+          <div class="card-header">
+            <img src="icon1.png" alt="Mission Icon">
+            <h3>Our Mission</h3>
+          </div>
+          <div class="divider"></div>
+          <p>To Make Every Ambitious Business Look Like It Already Belongs On The World Stage By Creating Websites And Identities That Spark Trust, Confidence, And Growth.</p>
+        </div>
+        <!-- Vision -->
+        <div class="card">
+          <div class="card-header">
+            <img src="icon2.png" alt="Vision Icon">
+            <h3>Our Vision</h3>
+          </div>
+          <div class="divider"></div>
+          <p>To Be The Creative Partner For Businesses Who Dare To Dream Bigger Helping Them Move From “Just Another Brand” To “The Only Brand That Matters.”</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Story -->
+    <div class="story">
+      <div class="story-text">
+        <h4>OUR STORY</h4>
+        <div class="divider" style="margin-top: 30px;"></div>
+        <p>
+          I Didn't Start Chérie & Co. Studios® Because I Love Websites.<br><br>
+          I Started It Because I've Seen Too Many Brilliant Ideas Go Unnoticed — Not Because They Lacked Vision, But Because They Didn’t Look The Part.<br><br>
+          Founders With Passion Were Being Overlooked. Dreamers With Big Ideas Were Struggling To Explain What They Do. I Know That Struggle — Building Something From Nothing, With No Roadmap, No Help, Just Vision.<br><br>
+          So I Built The Kind Of Agency I Wish I Had When I Was Starting Out.<br><br>
+          Chérie & Co. Studios® Exists For The Bold Ones — The People Still Figuring It Out But Refusing To Give Up.
+        </p>
+      </div>
+      <div class="story-img">
+        <img src="founder.png" alt="Founder">
+        
+        <p>Dhruv Katrodiya<br>
+          <div class="ceo">Founder And CEO</p></div>
+      </div>
+    </div>
+
+    <!-- Principles -->
+    <div class="principles">
+      <h2>The principles we live by.</h2>
+      <p>The foundation behind every design.</p>
+      <div class="principle-cards">
+        <div class="principle-box">
+          <img src="trust.png" alt="Trust First">
+          <div class="principle-icon"><img src="trust-icon.png" alt=""></div>
+          <div class="principle-label">Trust First</div>
+        </div>
+        <div class="principle-box">
+          <img src="bold.png" alt="Bold Always">
+          <div class="principle-icon"><img src="bold-icon.png" alt=""></div>
+          <div class="principle-label">Bold Always</div>
+        </div>
+        <div class="principle-box">
+          <img src="client.png" alt="Client As Partner">
+          <div class="principle-icon"><img src="client-icon.png" alt=""></div>
+          <div class="principle-label">Client As Partner</div>
+        </div>
+        <div class="principle-box">
+          <img src="perception.png" alt="Perception Is Power">
+          <div class="principle-icon"><img src="perception-icon.png" alt=""></div>
+          <div class="principle-label">Perception Is Power</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h3>Contact Us</h3>
+        <p>AR Mall & Multiplex, Opp. Panvel Point, Mota Varachha, Surat, Gujarat 394101</p>
+        <p>+91 8511773378 | +91 9316585315</p>
+        <p>info@cherieandcostudios.com</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <p><a href="#">Home</a></p>
+        <p><a href="#">About Us</a></p>
+        <p><a href="#">Services</a></p>
+        <p><a href="#">Portfolio</a></p>
+        <p><a href="#">Blogs</a></p>
+        <p><a href="#">Contact Us</a></p>
+      </div>
+      <div class="getintouch">
+        <h3>Lets Get In Touch</h3>
+        <p>info@cherieandcostudios.com</p>
+        <p>cherieandcostudios.com</p>
+      </div>
+    </div>
+    <div class="big-text">Built to Disrupt</div>
+    <div class="copyright">
+      Copyright Chérie & Co. 2025 | Privacy Policy | Terms And Conditions
+    </div>
+  </footer>
+</body>
+</html>
