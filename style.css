@@ -218,7 +218,7 @@
     }
     
     .about-left h2 { 
-      font-size: 48px; 
+      font-size: 60px;
       font-weight: bold; 
       margin-bottom: 20px; 
       margin-top: 87px;
@@ -228,11 +228,14 @@
       font-size: 22px; 
       color: #555; 
       font-style: italic; 
+      margin-top: 35px;
+      margin-left: -8px;
     }
     
     .about-right { 
       flex: 2; 
       min-width: 300px;
+      margin-top: -5px;
     }
     
     .about-right h3 { 
@@ -267,34 +270,36 @@
     }
     
     .more-btn::after {
-      content: "→"; 
-      position: absolute; 
-      right: 8px; 
+      content: "→";
+      position: absolute;
+      right: 8px;
       top: 50%;
       transform: translateY(-50%);
-      background: #fff; 
+      background: #fff;
       color: #000;
-      width: 32px; 
-      height: 32px; 
+      width: 40px;
+      height: 38px;
       border-radius: 50%;
-      display: flex; 
-      align-items: center; 
+      display: flex;
+      align-items: center;
       justify-content: center;
+      margin-right: -5px;
     }
     
     .profiles { 
-        display: flex;
-    align-items: center;
-    margin-left: 649px;
-    margin-top: -78px
+      display: flex;
+      align-items: center;
+      margin-left: 649px;
+      margin-top: -84px;
     }
     
     .profiles img { 
-      width: 45px; 
-      height: 45px; 
-      border-radius: 50%; 
-      border: 2px solid #fff; 
-      margin-left: -12px; 
+      width: 51px;
+      height: 51px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      margin-left: -13px;
+
     }
     
     .profiles img:first-child {
@@ -309,6 +314,7 @@
       padding: 40px 80px 100px; 
       background: #fff; 
       flex-wrap: wrap; 
+      margin-top: -37px;
     }
     
     .service-card {
@@ -359,7 +365,8 @@
       text-decoration: none; 
     }
 
-    /* Portfolio */
+  
+/* ================= Portfolio Section ================= */
     .portfolio { 
       position: relative; 
       padding: 80px; 
@@ -367,30 +374,33 @@
       overflow: hidden; 
       z-index: 1;
     }
-    
-    .portfolio::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 12px;
-      width: 98%;
-      height: 94%;
-      background: url('Protfolio.png') no-repeat center center/cover;
-      z-index: -2;
+
+    .portfolio::before {       
+      content: "";       
+      position: absolute;       
+      top: 0;       
+      left: 12px;       
+      width: 98%;       
+      height: 94%;       
+      background-color: #e8e3e0;       
+      border-radius: 12px;  /* corners ko round karne ke liye */
+      z-index: -2;     
     }
 
     .portfolio::after {
       content: "";
       position: absolute;
-      top: 27px;
-      left: 103px;
-      width: 51%;
-      height: 91%;
-      background: url('Union.png') no-repeat center center/cover;
-      opacity: 1;
+      top: -38px;
+      left: 79px;
+      width: 55%;
+      height: 99%;
+      background: url('Union.png') no-repeat center center;
+      background-size: 100%;
+      opacity: 0.5;
       z-index: -1;
     }
-    
+
+    /* ================= Header ================= */
     .portfolio-header { 
       display: flex; 
       justify-content: space-between; 
@@ -398,26 +408,27 @@
       flex-wrap: wrap; 
       margin-bottom: 20px; 
     }
-    
+
     .portfolio-title { 
       font-size: 16px; 
       font-weight: bold; 
       color: #ff6600; 
       text-transform: uppercase; 
     }
-    
+
     .portfolio-text { 
       font-size: 42px; 
       line-height: 1.4; 
       max-width: 760px; 
     }
-    
+
     .portfolio-divider {
       border: none;
       border-top: 1px solid #ccc;
       margin: 29px 0;
     }
-    
+
+    /* ================= Cards ================= */
     .portfolio-items { 
       display: flex; 
       flex-wrap: wrap; 
@@ -425,30 +436,35 @@
       gap: 30px; 
       margin-top: 50px; 
     }
-    
+
     .portfolio-card {
       border-radius: 16px;
-        padding: -26px;
-        flex: 1;
-        min-width: 300px;
-        max-width: 369px;
-        background: #f8f6f600;
-        text-align: left;
+      flex: 1;
+      min-width: 300px;
+      max-width: 369px;
+      background: transparent;
+      text-align: left;
     }
-    
+
     .portfolio-card .portfolio-img {
       position: relative;
       border-radius: 16px;
       overflow: hidden;
       margin-bottom: 15px;
     }
-    
+
     .portfolio-card img { 
       width: 100%; 
       border-radius: 16px; 
       display: block; 
+      transition: transform 0.3s ease;
     }
-    
+
+    /* Hover Zoom */
+    .portfolio-card:hover img {
+      transform: scale(1.05);
+    }
+
     .date-tag { 
       position: absolute; 
       bottom: 12px; 
@@ -459,7 +475,7 @@
       padding: 6px 14px; 
       border-radius: 20px; 
     }
-    
+
     .portfolio-card h5 {
       font-size: 19px;
       font-weight: 600;
@@ -471,133 +487,294 @@
       color: #555;
     }
 
-      
-/* ✅ Vision Section Styling (Final Like Image) */
-
-     
-    .vision-section {
-      padding: 80px 60px;
-      background: #fff;
-    }
-    .vision-container {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 60px;
-      flex-wrap: wrap;
-      position: relative;
-    }
-
-    /* Left */
-    .vision-content {
-      flex: 1;
-      min-width: 380px;
-    }
-    .vision-title {
-      font-size: 34px;
-      font-weight: 700;
-      line-height: 1.3;
-      margin-bottom: 41px;
-      color: #000;
-    }
-    .vision-title span {
-      color: #6f6f6f;
-      font-weight: 400;
-    }
-
-    /* ✅ Move Subtitle to Right Top */
-    .vision-subtitle {
+    /* ================= Overlay ================= */
+    .overlay {
       position: absolute;
-      right: 56px;
-      top: 14px;
-      font-size: 25px;
-      color: #f46b08;
-      font-weight: bold;
-      text-transform: uppercase;
-      margin: 0;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);  /* dark bg */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      border-radius: 16px;
     }
 
-    /* Accordion */
-    .accordion {
-      border-top: 1px solid #ddd;
-      margin-top: 81px;
+    .portfolio-card:hover .overlay {
+      opacity: 1;
+    }
 
-    }
-    .accordion-item {
-      border-bottom: 1px solid #ddd;
-    }
-    .accordion-header {
+    /* ================= View Button Group ================= */
+    .view-box {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      padding: 35px 0;
+      background: #000;
+      color: #fff;
+      padding: 11px 8px;
+      border-radius: 60px;
+      font-size: 14px;
+      font-weight: 600;
+      gap: 10px;
       cursor: pointer;
       transition: all 0.3s ease;
     }
-    .accordion-header:hover .accordion-title {
-      color: #f46b08;
-    }
-    .accordion-number {
-      font-size: 14px;
-      color: #888;
-      font-weight: 500;
-      margin-right: 12px;
-    }
-    .accordion-title {
-      flex: 1;
-      font-size: 18px;
-      font-weight: 600;
-      color: #000;
-    }
-    .accordion-icon {
-      font-size: 20px;
-      color: #000;
-      transition: transform 0.3s ease;
-    }
-    .accordion-item.active .accordion-icon {
-      transform: rotate(180deg);
-    }
-    .accordion-content {
-      padding: 0 0 18px 28px;
-      color: #555;
+
+    .view-text {
+      margin-right: 11px;
       font-size: 16px;
-      display: none;
-      line-height: 1.6;
-    }
-    .accordion-item.active .accordion-content {
-      display: block;
+      margin-left: 16px;
     }
 
-    /* Right Image */
-    .vision-image {
-      flex: 1;
-      min-width: 380px;
+    .circle-btn {
+      width: 53px;
+      height: 51px;
+      background: #fff;
+      color: #000;
       display: flex;
-      justify-content: flex-end;
-      align-items: flex-start;
+      justify-content: center;
+      align-items: center;
+      border-radius: 56%;
+      font-size: 31px;
+      font-weight: bold;
+      transition: all 0.3s ease;
     }
-    .vision-image img {
-      max-width: 94%;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-      object-fit: cover;
-      margin-top: 203px;
-      margin-right: 26px;
 
-    /* ✅ Responsive */
-    @media (max-width: 992px) {
-      .vision-container {
-        flex-direction: column;
-      }
-      .vision-title {
-        font-size: 32px;
-      }
-      .vision-subtitle {
-        position: relative;
-        margin-bottom: 20px;
-      }
+    /* Hover effect */
+    .view-box:hover {
+      background: #ff6600;
     }
+
+    .view-box:hover .circle-btn {
+      background: #000;
+      color: #fff;
+    }
+
+      
+/* ✅ Vision Section Styling (Unique Classes Version) */
+
+.vision-section--whatwe {
+  padding: 80px 60px;
+  background: #fff;
+}
+
+.vision-container--whatwe {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 60px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+/* Left */
+.vision-left--whatwe {
+  flex: 1;
+  min-width: 380px;
+}
+
+.vision-title--whatwe {
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 41px;
+  color: #000;
+}
+
+.vision-title-line2--whatwe {
+  color: #6f6f6f;
+  font-weight: 400;
+}
+
+/* ✅ Move Subtitle to Right Top */
+.vision-subtitle--whatwe {
+  position: absolute;
+  right: 64px;
+  top: 61px;
+  font-size: 25px;
+  color: #f46b08;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* Accordion Wrapper */
+.accordion--whatwe {
+  border-top: 1px solid #ddd;
+  margin-top: 81px;
+}
+
+/* Accordion Item: Brand Identity */
+.accordion-item--brand-identity {
+  border-bottom: 1px solid #ddd;
+}
+.accordion-header--brand-identity {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 51px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.accordion-header--brand-identity:hover .accordion-title--brand-identity {
+  color: #f46b08;
+}
+.accordion-number--brand-identity {
+  font-size: 19px;
+  color: #888;
+  font-weight: 500;
+  margin-right: 12px;
+}
+.accordion-title--brand-identity {
+  flex: 1;
+  font-size: 25px;
+  font-weight: 600;
+  color: #000;
+}
+.accordion-icon--brand-identity {
+  font-size: 26px;
+  color: #000;
+  transition: transform 0.3s ease;
+}
+.accordion-item--brand-identity.is-open .accordion-icon--brand-identity {
+  transform: rotate(180deg);
+}
+.accordion-content--brand-identity {
+  padding: 0 0 0px 28px;
+  color: #555;
+  font-size: 16px;
+  display: none;
+  line-height: 1.6;
+}
+.accordion-item--brand-identity.is-open .accordion-content--brand-identity {
+  display: block;
+}
+
+/* Accordion Item: Web & UI UX */
+.accordion-item--web-uiux {
+  border-bottom: 1px solid #ddd;
+}
+.accordion-header--web-uiux {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 51px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.accordion-header--web-uiux:hover .accordion-title--web-uiux {
+  color: #f46b08;
+}
+.accordion-number--web-uiux {
+  font-size: 19px;
+  color: #888;
+  font-weight: 500;
+  margin-right: 12px;
+}
+.accordion-title--web-uiux {
+  flex: 1;
+  font-size: 25px;
+  font-weight: 600;
+  color: #000;
+}
+.accordion-icon--web-uiux {
+  font-size: 26px;
+  color: #000;
+  transition: transform 0.3s ease;
+}
+.accordion-item--web-uiux.is-open .accordion-icon--web-uiux {
+  transform: rotate(180deg);
+}
+.accordion-content--web-uiux {
+  padding: 0 0 18px 28px;
+  color: #555;
+  font-size: 16px;
+  display: none;
+  line-height: 1.6;
+}
+.accordion-item--web-uiux.is-open .accordion-content--web-uiux {
+  display: block;
+}
+
+/* Accordion Item: E-Commerce */
+.accordion-item--ecommerce {
+  border-bottom: 1px solid #ddd;
+}
+.accordion-header--ecommerce {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 51px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.accordion-header--ecommerce:hover .accordion-title--ecommerce {
+  color: #f46b08;
+}
+.accordion-number--ecommerce {
+  font-size: 19px;
+  color: #888;
+  font-weight: 500;
+  margin-right: 12px;
+}
+.accordion-title--ecommerce {
+  flex: 1;
+  font-size: 25px;
+  font-weight: 600;
+  color: #000;
+}
+.accordion-icon--ecommerce {
+  font-size: 26px;
+  color: #000;
+  transition: transform 0.3s ease;
+}
+.accordion-item--ecommerce.is-open .accordion-icon--ecommerce {
+  transform: rotate(180deg);
+}
+.accordion-content--ecommerce {
+  padding: 0 0 18px 28px;
+  color: #555;
+  font-size: 16px;
+  display: none;
+  line-height: 1.6;
+}
+.accordion-item--ecommerce.is-open .accordion-content--ecommerce {
+  display: block;
+}
+
+/* Right Image */
+.vision-right--whatwe {
+  flex: 1;
+  min-width: 380px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+.vision-img--whatwe {
+  max-width: 89%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  object-fit: cover;
+  margin-top: 253px;
+  margin-right: 26px;
+}
+
+/* ✅ Responsive */
+@media (max-width: 992px) {
+  .vision-container--whatwe {
+    flex-direction: column;
+  }
+  .vision-title--whatwe {
+    font-size: 32px;
+  }
+  .vision-subtitle--whatwe {
+    position: relative;
+    margin-bottom: 20px;
+  }
+}
 
     /* ✅ Responsive */
     @media (max-width: 1200px) {
@@ -613,7 +790,7 @@
         font-size: 36px;
       }
     }
-    }
+    
     
     @media (max-width: 992px) {
       .navbar { 
@@ -737,11 +914,44 @@
 
 /* ✅ Insights Section */
 .insights-section {
-  background: #f6f4f3; /* light grey background */
+  position: relative;
+  background:#f9ede7; 
   padding: 60px 80px;
   border-radius: 12px;
+  overflow: hidden;
+  z-index: 1;
 }
 
+/* Dark base overlay */
+.insights-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:#dfdfdf;
+  opacity: 0.4;   /* halka dark overlay */
+  z-index: -2;
+}
+
+/* ✅ Background design image on top of overlay */
+.insights-section::after {
+  content: "";
+  position: absolute;
+  top: 391px;
+  left: 59%;
+  transform: translateX(-50%);
+  width: 81%;
+  height: 100%;
+  background: url("Union.png") no-repeat center center;
+    background-size: auto;
+  background-size: contain;
+  opacity: 0.45;
+  z-index: -1;
+  transform: rotate(135deg);
+}
+
+/* ✅ Container */
 .insights-container {
   display: flex;
   align-items: flex-start;
@@ -749,23 +959,28 @@
   gap: 50px;
   max-width: 1200px;
   margin: auto;
+  margin-left: -33px;
+  position: relative;
+  z-index: 1;
 }
 
-/* Left Image */
+/* ✅ Left Image */
 .insights-image img {
   width: 100%;
-  max-width: 500px;
+  max-width: 526px;
   border-radius: 12px;
   object-fit: cover;
 }
 
-/* Right Content */
+/* ✅ Right Content */
 .insights-content {
   flex: 1;
+  margin-right: -87px;
+  margin-top: -10px;
 }
 
 .insights-content h2 {
-  font-size: 44px;
+  font-size: 50px;
   font-weight: 700;
   line-height: 1.3;
   color: #111;
@@ -777,99 +992,127 @@
   font-weight: 400;
 }
 
-/* Insights Button */
-.insights-btn {
-   display: inline-flex; 
-      align-items: center;
-      background: #000; 
-      color: #fff;
-      padding: 14px 24px; 
-      border-radius: 30px;
-      font-size: 16px; 
-      font-weight: 600;
-      text-decoration: none; 
-      position: relative;
-}
+/* ✅ Insights Button (with circle arrow) */
+  .insights-btn {
+    display: inline-flex; 
+    align-items: center;
+    background: #000; 
+    color: #fff;
+    padding: 14px 24px; 
+    border-radius: 30px;
+    font-size: 18px; 
+    font-weight: 600;
+    text-decoration: none; 
+    position: relative;
+    margin-top: 69px;
+    padding-left: 18px;
+    padding-right: 52px;
+  }
 
-/* Remove any old pseudo-elements that may create circle */
-.insights-btn::after,
-.insights-btn::before {
-  content: none !important;
-}
+  .insights-btn::after {
+    content: "→";
+    position: absolute;
+    right: 4px;
+    top: 49.6%;
+    transform: translateY(-50%);
+    background: #fff;
+    color: #000;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-/* Hover Effect */
-.insights-btn:hover {
-  background: #000000;
-  color: #ffffff;
-}
+  .insights-btn:hover {
+    background: #ff6600;
+    color: #fff;
+  }
 
-.insights-btn:hover {
-  background: #ff6600;
-}
+  /* ✅ Testimonials Header */
+  .testimonials-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 13px;
+    margin-top: 93px;
+  }
 
-/* Testimonials Header */
-.testimonials-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 13px;
-  margin-top: 93px;
-}
+  .testimonials-header h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ff6600;
+    margin-left: 4px;
+  }
 
-.testimonials-header h4 {
-  font-size: 16px;
-  font-weight: 600;
-  color: #ff6600; /* orange */
-}
+  .testimonials-header .view-all {
+    font-size: 17px;
+    color: #111;
+    margin-right: 37px;
+    margin-top: 11px;
+  }
 
-.testimonials-header .view-all {
-  font-size: 14px;
-  color: #111;
-  margin-right: 37px;
-  margin-top: 11px;
-}
+  /* Divider Line */
+  .divider-line {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 25px -1px 56px;
+  }
 
-/* Divider Line */
-.divider-line {
-  border: none;
-  border-top: 1px solid #ddd;
-  margin: 25px -1px 56px;
+  /* ✅ Testimonials Grid */
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: -10px;
+  }
 
-  margin-right: 27px;
-}
+  /* ✅ First paragraph */
+  .testimonial-item .para1 {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #333;
+    position: relative;
+    margin-bottom: 13px;
+    margin-top: 11px;
+  }
+  .testimonial-item .para1::before {
+    content: "❞";
+    font-size: 40px;
+    color: #ff6600;
+    position: absolute;
+    left: 0px;
+    top: -47px;
+    transform: scaleX(-1);
+  }
 
-/* Testimonials Grid */
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-}
+  /* ✅ Second paragraph */
+  .testimonial-item .para2 {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #333;
+    position: relative;
+    margin-bottom: 13px;
+    margin-top: 11px;
+    padding-bottom: 29px;
+  }
+  .testimonial-item .para2::before {
+    content: "❞";
+    font-size: 40px;
+    color: #ff6600;
+    position: absolute;
+    left: 0px;
+    top: -45px;
+    transform: scaleX(-1);
+  }
 
-.testimonial-item p {
-  font-size: 18px;
-  line-height: 1.6;
-  color: #333;
-  position: relative;
-  margin-bottom: 13px;
-  margin-top: -37px;
-
-}
-
-.testimonial-item p::before {
-  content: "❝";
-  font-size: 40px;
-  color: #ff6600;
-  position: absolute;
-  left: -25px;
-  top: -10px;
-}
-
-.testimonial-item span {
-  font-size: 14px;
-  color: #666;
-  font-style: italic;
-}
-
+  /* ✅ Testimonial author */
+  .testimonial-item span {
+    font-size: 14px;
+    color: #666;
+    font-style: italic;
+  }
 
 
 /* ==== Footer Base ==== */
@@ -890,44 +1133,54 @@
    📌 CONTACT COLUMN
 ============================ */
 .contact-heading {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 600;
   margin-bottom: 20px;
+  margin-left: -39px;
 }
 
 .contact-text {
-  font-size: 16px;
+  font-size: 19px;
   line-height: 1.8;
+  margin-left: -41px;
 }
 
 .contact-phone {
-  font-size: 16px;
+  font-size: 18px;
   margin-top: 10px;
+  margin-left: -43px;
 }
 
 .contact-email {
-  font-size: 16px;
+  font-size: 18px;
   margin-top: 10px;
+  margin-left: -40px;
 }
 
 .contact-website {
-  font-size: 16px;
+  font-size: 18px;
   margin-top: 5px;
+  margin-left: -41px;
 }
 
 /* ============================
    📌 QUICK LINKS COLUMN
 ============================ */
+.footer-col quicklinks-col{
+  margin-left: -40px;
+}
 .quicklinks-heading {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 20px;
+  margin-left: -185px;
 }
 
 .quicklinks-list {
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-left: -183px;
 }
 
 .quicklink {
@@ -950,18 +1203,21 @@
   font-weight: 600;
   margin-bottom: 20px;
   margin-right: 16%;
+  margin-left: -252px;
 }
 
 .touch-mail {
-font-size: 28px;
-  font-weight: 500;
-  margin-bottom: 8px;
+  font-size: 47px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    margin-left: -252px;
 
 }
 
 .touch-site {
-font-size: 28px;
+  font-size: 53px;
   font-weight: 500;
+  margin-left: -257px;
 
 }
 
@@ -970,10 +1226,12 @@ font-size: 28px;
    📌 BIG TAGLINE
 ============================ */
 .footer-tagline {
-  font-size: 152px;
-  font-weight: 800;
+  font-size: 177px;
+  font-weight: 600px;
   text-align: left;
-  margin: 46px -38px 50px;
+  margin: 46px -59px 50px;
+  
+  margin-top: -15px;
 }
 
 /* ============================
@@ -984,15 +1242,17 @@ font-size: 28px;
   justify-content: space-between;
   align-items: center;
   padding-top: -14px;
-  margin-top: -57px;
+  margin-top: -11px;
+
 }
 
 /* Left → Privacy Policy */
 .footer-privacy {
   flex: 1;
   text-align: left;
-  font-size: 14px;
+  font-size: 16px;
   margin: 0;
+  margin-left: -46px;
 }
 
 /* Center → Copyright */
@@ -1007,6 +1267,8 @@ font-size: 28px;
 .footer-terms {
   flex: 1;
   text-align: right;
-  font-size: 14px;
+  font-size: 17px;
   margin: 0;
+  padding-left: 56px;
+  margin-right: -40px;
 }
