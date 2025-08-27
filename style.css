@@ -186,17 +186,16 @@
 .brand-img {
   display: flex;
   justify-content: center;
-  align-items: center;
   width: 100%;
-  margin-top: 75px; /* keep your existing spacing */
+  margin-top: 75px; /* Keep your original margin */
 }
 
 .brand-img img {
-  width: 100%;
-  max-width: 1197px; /* limits image size on large screens */
+  max-width: 100%;
   height: auto;
   display: block;
 }
+
     /* About */
     .about { 
       display: flex; 
@@ -1275,4 +1274,5 @@
   padding-left: 56px;
   margin-right: -40px;
 }
+
 
