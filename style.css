@@ -183,17 +183,20 @@
       font-weight: bold;
     }
     
-    .brand-img { 
-      margin-top: 75px; 
-    }
-    
-    .brand-img img { 
-      width: 1197px; 
-      max-width: 170%;
-      height: auto; 
-      display: block; 
-    }
+.brand-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 75px; /* keep your existing spacing */
+}
 
+.brand-img img {
+  width: 100%;
+  max-width: 1197px; /* limits image size on large screens */
+  height: auto;
+  display: block;
+}
     /* About */
     .about { 
       display: flex; 
@@ -1272,3 +1275,4 @@
   padding-left: 56px;
   margin-right: -40px;
 }
+
