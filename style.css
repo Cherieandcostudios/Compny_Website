@@ -187,13 +187,28 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-top: 75px; /* Keep your original margin */
+  margin-top: 75px; /* keep your original spacing */
 }
 
 .brand-img img {
-  max-width: 100%;
+  width: 1197px; /* fixed size for large screens */
   height: auto;
   display: block;
+}
+
+/* ✅ Responsive: Scale down on smaller screens */
+@media (max-width: 1200px) {
+  .brand-img img {
+    width: 100%;
+    max-width: 800px; /* still large but smaller for laptops */
+  }
+}
+
+@media (max-width: 768px) {
+  .brand-img img {
+    width: 100%;
+    max-width: 500px; /* for tablets and small screens */
+  }
 }
 
     /* About */
@@ -1274,5 +1289,6 @@
   padding-left: 56px;
   margin-right: -40px;
 }
+
 
 
