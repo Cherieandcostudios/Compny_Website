@@ -260,10 +260,14 @@
     
     .about-right h3 { 
       font-size: 50px; 
-      font-weight: 600px; 
+      font-weight: 500px; 
       margin-bottom: 20px; 
     }
-    
+
+    .about-right h3 .highlight {
+       color: #f46b08;
+    }
+
     .btn-profiles { 
       display: flex; 
       flex-wrap: wrap; 
@@ -1292,6 +1296,7 @@
   padding-left: 56px;
   margin-right: -40px;
 }
+
 
 
 
