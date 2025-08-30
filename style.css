@@ -14,7 +14,7 @@
     }
     
     body {
-      font-family: Helvetica, sans-serif;
+      font-family: Inter, sans-serif;
       color: #000; 
       background: #fff;
     }
@@ -1292,6 +1292,7 @@
   padding-left: 56px;
   margin-right: -40px;
 }
+
 
 
 
