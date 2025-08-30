@@ -1,7 +1,4 @@
-/* ✅ Import Inter Font */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
-/* Reset */
+ /* Reset */
     * { 
       margin: 0; 
       padding: 0; 
@@ -14,57 +11,58 @@
     }
     
     body {
-      font-family: Inter, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
       color: #000; 
       background: #fff;
     }
 
-  /* Navbar */
-.navbar {
-  position: absolute; 
-  top: 0; 
-  left: 0;
-  width: 100%; 
-  padding: 20px 80px;
-  display: flex; 
-  justify-content: space-between; 
-  align-items: center;
-  z-index: 1000;
-}
+    /* Navbar */
+    .navbar {
+      position: absolute; 
+      top: 0; 
+      left: 0;
+      width: 100%; 
+      padding: 20px 80px;
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center;
+      z-index: 1000;
+    }
+    
+    .navbar .logo img { 
+      height: 24px; 
+      max-width: 100%; 
+    }
+    
+    .navbar ul { 
+      list-style: none; 
+      display: flex; 
+      gap: 40px; 
+    }
+    
+    .navbar ul li a {
+      text-decoration: none; 
+      color: #fff;
+      font-size: 16px; 
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    
+    .navbar ul li a:hover { 
+      color: #f46b08; 
+    }
+    
+    .contact-btn {
+      background: #f46b08; 
+      color: #fff;
+      padding: 12px 28px; 
+      border-radius: 25px;
+      font-size: 16px; 
+      font-weight: 600;
+      text-decoration: none; 
+      white-space: nowrap;
+    }
 
-.navbar .logo img { 
-  height: 24px; 
-  max-width: 100%; 
-}
-
-.navbar ul { 
-  list-style: none; 
-  display: flex; 
-  gap: 40px; 
-}
-
-.navbar ul li a {
-  text-decoration: none; 
-  color: #fff;
-  font-size: 16px; 
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.navbar ul li a:hover { 
-  color: #f46b08; 
-}
-
-.contact-btn {
-  background: #f46b08; 
-  color: #fff;
-  padding: 12px 28px; 
-  border-radius: 25px;
-  font-size: 16px; 
-  font-weight: 600;
-  text-decoration: none; 
-  white-space: nowrap;
-}
     /* Hamburger (mobile only) */
     .menu-toggle {
       display: none; 
@@ -143,7 +141,7 @@
     
     .hero-content h2 {
       font-size: 28px; 
-      font-weight: 600;
+      font-weight: 500;
       line-height: 1.6; 
       margin-bottom: 20px; 
       margin-top: 140px;
@@ -259,15 +257,10 @@
     
     .about-right h3 { 
       font-size: 50px; 
-      font-weight: 500px; 
+      font-weight: normal; 
       margin-bottom: 20px; 
     }
-
-   .about-right h3 b {
-      color: #f46b08;
-      font-weight: 500px;
-}
-
+    
     .btn-profiles { 
       display: flex; 
       flex-wrap: wrap; 
@@ -434,19 +427,16 @@
     }
 
     .portfolio-title { 
-      font-size: 22px; 
+      font-size: 16px; 
       font-weight: bold; 
-      color: #f46b08; 
-      text-transform: uppercase;
-      margin-bottom: 20px;
+      color: #ff6600; 
+      text-transform: uppercase; 
     }
 
     .portfolio-text { 
-      font-size: 50px; 
+      font-size: 42px; 
       line-height: 1.4; 
-      max-width: 760px;
-      font-weight: 500px;
-      margin-bottom: 20px;
+      max-width: 760px; 
     }
 
     .portfolio-divider {
@@ -1299,18 +1289,6 @@
   padding-left: 56px;
   margin-right: -40px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
