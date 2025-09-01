@@ -1,4 +1,7 @@
- /* Reset */
+/* ✅ Import Inter Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Reset */
     * { 
       margin: 0; 
       padding: 0; 
@@ -11,7 +14,7 @@
     }
     
     body {
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: Inter, sans-serif;
       color: #000; 
       background: #fff;
     }
@@ -1289,6 +1292,7 @@
   padding-left: 56px;
   margin-right: -40px;
 }
+
 
 
 
