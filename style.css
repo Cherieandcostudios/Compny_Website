@@ -32,7 +32,9 @@
       z-index: 1000;
       background: #fff;   /* 👈 solid white background */
     }
-    
+    .menu-toggle {
+  display: none; /* currently hidden */
+}
     .navbar .logo img { 
       height: 24px; 
       max-width: 100%; 
@@ -87,7 +89,7 @@
       right: -100%; 
       width: 100%; 
       height: 100%;
-      background: rgba(0,0,0,0.95);
+      background: #da520c;
       display: flex; 
       flex-direction: column; 
       align-items: center; 
@@ -103,9 +105,9 @@
     
     .mobile-menu a { 
       color: #fff; 
-      font-size: 22px; 
+      font-size: 40px; 
       font-weight: bold; 
-      text-decoration: none; 
+      text-decoration: none;
     }
     
     .close-btn {
@@ -117,12 +119,31 @@
       cursor: pointer;
     }
 
+    
+@media (max-width: 768px) {
+  .navbar ul,
+  .contact-btn {
+    display: none; /* hide desktop menu */
+  }
+  
+  .menu-toggle {
+    display: block; /* show hamburger */
+    color: #333; /* adjust color if needed */
+    margin-right: -20px;
+  }
+     .navbar .logo img {
+        margin-left: -20px;
+     }
+
+}
     .hero {
   display: flex;
   height: 100vh; /* full screen */
   width: 100%;
-  margin-top: 0; /* avoid gap under navbar if it's fixed */
+  margin-top: 0100px; /* avoid gap under navbar if it's fixed */
 }
+
+
 
 .hero-left,
 .hero-right {
@@ -141,13 +162,47 @@
 align-items: middle;
   background: #f4f4f4; /* you can change this to a background image */
 }
+/* --- Your Base H1 Styling --- */
 .hero-left h1 {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color: #333;
-  font-size: 90px;
-  margin-bottom: 1rem;
-  font-weight: bolder;
-  line-height: 80px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #333;
+    font-size: 90px;
+    margin-bottom: 1rem;
+    font-weight: bolder;
+    line-height: 80px;
+    margin-left: 20px;
+    
+    /* 💡 Essential for animation: Allows words to wrap and space correctly */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between words */
+}
+
+/* --- Initial State (Hidden and Blurred) --- */
+.hero-left h1 .text-word {
+    /* Resets line-height for individual spans if needed, but inherits font-size */
+    line-height: inherit; 
+    
+    /* Animation Properties: Default state */
+    display: inline-block;
+    filter: blur(10px);
+    opacity: 0;
+    transform: translateY(50px); 
+    
+    /* Set the transition duration */
+    transition: all 0.6s ease-out; 
+}
+
+/* --- Final State (Visible and Clear) --- */
+.hero-left h1 .text-word.in-view {
+    filter: blur(0);
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Highlight Style */
+.hero-left h1 .text-word.highlight {
+    color: #da520c; /* Example highlight color */
 }
 
 .hero-left p {
@@ -155,6 +210,8 @@ align-items: middle;
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
   max-width: 500px;
+    margin-left: 20px;
+
 }
 
 /* Highlighted word */
@@ -175,6 +232,8 @@ align-items: middle;
   border-radius: 100px;
   cursor: pointer;
   transition: background 0.3s ease;
+    margin-left: 20px;
+
 }
 
 .hero-left button:hover {
@@ -182,134 +241,193 @@ align-items: middle;
 }
 
 .hero-right {
-  background: #da520c; /* you can change this to a background image */
+  flex: 1;
+  background: url('bg1.jpg') center/cover no-repeat; /* full cover */
+  position: relative;
 }
 
-/* about us Section Styles */
-.about-us {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Optional overlay for better contrast (if you want to put text on top later) */
+.hero-right::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3); /* dark overlay, adjust opacity */
+}
+/* Animations */
+@keyframes fadeInLeft {
+  0% { opacity: 0; transform: translateX(-50px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .hero {
+    flex-direction: column;
+    height: auto;
+    margin-top: 60px;
+  }
+  .hero-left, .hero-right {
+    flex: unset;
     width: 100%;
-    margin-top: 50px;
+    padding: 2rem;
+  }
+  .hero-left h1 {
+    font-size: 48px;
+    line-height: 56px;
+  }
+  .hero-right{
+    display: none;
+  }
+}
+
+/* About Us Section */
+.about-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 50px;
+  padding: 0 20px; /* add side padding for small screens */
 }
 
 .content {
-    max-width: 800px;
-    padding: 20px;
-    box-sizing: border-box;
+  max-width: 1000px;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center; /* centers text for all screens */
 }
 
 /* Text and heading styles */
 .header {
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 20px;
-    text-align: center;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
 }
 
+/* Base Styling */
 .main-heading {
-    font-size: 100px;
+    font-size: 80px;
     font-weight: 700;
     margin: 0;
-    text-align: center;
     line-height: 90px;
-
 }
 
+/* Highlight Styling */
 .main-heading .highlight {
-    color: #da520c; /* A shade of red-orange for 'you' */
-    position: relative;
+    color: #da520c;
     display: inline-block;
-    text-align: center;
-    line-height: normal
-
 }
-
 
 
 .sub-text {
-    font-size: 1.1em;
-    line-height: 1.6;
-    margin-top: 20px;
-    color: #555;
-    text-align: center;
-    font-family: 'Merriweather', serif;
-
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-top: 20px;
+  color: #555;
+  font-family: 'Merriweather', serif;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Button styles */
+/* Buttons */
 .buttons {
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap; /* Added for better mobile responsiveness */
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .btn {
-    padding: 15px 30px;
-    font-size: 1em;
-    font-weight: 700;
-    border: none;
-    border-radius: 100px;
-    text-decoration: none;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    white-space: nowrap; /* Prevents text from wrapping */
+  padding: 15px 30px;
+  font-size: 1em;
+  font-weight: 700;
+  border: none;
+  border-radius: 100px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  white-space: nowrap;
 }
 
 .btn-primary {
-    background-color: #da520c;
-    color: #fff;
-  
+  background-color: #da520c;
+  color: #fff;
 }
 
 .btn-primary:hover {
-    background-color: #333;
+  background-color: #333;
 }
 
 .btn-secondary {
-    background-color: transparent;
-    color: #555;
-    padding: 15px 0;
+  background-color: transparent;
+  color: #555;
+  padding: 15px 0;
 }
 
 .btn-secondary:hover {
-    color: #333;
-    border-bottom-color: #333;
+  color: #333;
+  border-bottom: 2px solid #333;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .main-heading {
-        font-size: 3em;
-    }
-    .sub-text {
-        font-size: 1em;
-    }
-    .buttons {
-        flex-direction: column;
-        gap: 15px;
-    }
-    .btn {
-        width: 100%;
-        max-width: 250px;
-    }
-}
-
-/* Image styles */
+/* Image */
 .content img {
-    width: 600px;
-    height: auto;
-    max-width: 600px; /* Adjust as needed */
-    margin-top: 50px;
-
- /* Added for centering */
-    display: block; /* Make it a block-level element */
-    margin-left: auto; /* Center it horizontally */
-    margin-right: auto; /* Center it horizontally */
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin-top: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 12px; /* optional: modern look */
 }
+
+/* Responsive Breakpoints */
+@media (max-width: 992px) {
+  .main-heading {
+    font-size: 60px;
+    line-height: 70px;
+  }
+  .sub-text {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-heading {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .sub-text {
+    font-size: 0.95em;
+  }
+  .buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .btn {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-heading {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .sub-text {
+    font-size: 0.9em;
+  }
+  .content {
+    padding: 10px;
+  }
+}
+
 
 /* Styling for the new Stats Section */
 .stats-section {
@@ -1259,4 +1377,62 @@ footer {
     .social-icons {
         margin-top: 10px;
     }
+}
+
+/* --- The Dialog Box/Popover --- */
+.tooltip-text {
+    /* 1. KEY CHANGE: Increase size for more content */
+    width: 350px; 
+    max-width: 90vw; /* Ensures it doesn't overflow on small screens */
+
+    /* Positioning */
+    position: absolute;
+    z-index: 100; /* High z-index to ensure it sits on top */
+    
+    /* 2. KEY CHANGE: Position it slightly below the button, not way above */
+    top: 150%; 
+    
+    left: 50%;
+    transform: translateX(-50%); /* Centers the box */
+
+    /* Appearance */
+    background-color: #f9f9f9; /* Lighter background for a cleaner popover look */
+    color: #333;
+    text-align: left; /* Aligns text left for readability */
+    padding: 20px; /* More padding */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+    /* Hidden by default */
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s, top 0.3s;
+}
+
+/* Optional: Adjust button container if needed, though it should still be `position: relative;` */
+.tooltip-container {
+    position: relative; 
+    display: inline-block; 
+}
+
+/* --- CLICK EFFECT (The Trigger) --- */
+.tooltip-container.is-active .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+    /* Optional: Slight upward animation when active */
+    top: 120%; 
+}
+
+/* Optional: Adjust the arrow to point upwards since the box is below */
+.tooltip-text::after {
+    content: "";
+    position: absolute;
+    bottom: 100%; /* At the top edge of the popover box */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    /* Arrow color matches the popover background */
+    border-color: transparent transparent #f9f9f9 transparent; 
 }
